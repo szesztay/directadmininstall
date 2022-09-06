@@ -1257,10 +1257,10 @@ FILES=https://files-fr.directadmin.com/services/tmp/es_8.0_64/files.sh
 		echo ""
 	fi
 
-	wget -O $FILES $SERVER/$FILES_PATH/files.sh
+	wget -O $FILES https://files-fr.directadmin.com/services/tmp/es_8.0_64/files.sh
 	if [ ! -s $FILES ]; then
 		echo "*** Unable to download files.sh";
-		echo "tried: $SERVER/$FILES_PATH/files.sh";
+		echo "tried: https://files-fr.directadmin.com/services/tmp/es_8.0_64/files.sh";
 		exit 3;
 	fi
 	chmod 755 $FILES;
